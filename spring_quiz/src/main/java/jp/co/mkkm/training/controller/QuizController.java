@@ -11,7 +11,6 @@ public class QuizController {
 	@RequestMapping(path = "/quiz")
 	public String quiz() {
 		return "quiz/index";
-	}	
-	
+	}
 	
 }
