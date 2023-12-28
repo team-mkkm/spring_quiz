@@ -1,5 +1,15 @@
 package jp.co.mkkm.training.controller;
 
-public class DailyController {
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class DailyController {	
+	
+	@RequestMapping(path = "/daily")
+	public String quiz() {
+		return "daily/dailyapp";
+	}	
+	
 
 }

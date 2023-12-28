@@ -1130,3 +1130,177 @@ java.lang.IllegalArgumentException:
 !MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
 	spring_quiz[*]: {CONTENT}
 		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:03:34.071
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				DailyController.java[+]: {}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/.metadata)[+]
+		ResourceDelta(/spring_quiz/bin)[+]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:03:34.490
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/bin)[*]
+		ResourceDelta(/spring_quiz/src)[*]
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:03:34.868
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/.metadata)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:03:35.491
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:19.544
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:23.749
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] QuizController.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:36.663
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {PRIMARY RESOURCE}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:37.264
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:39.899
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {PRIMARY RESOURCE}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:40.111
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:56.530
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {PRIMARY RESOURCE}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:04:56.813
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/src)[*]
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:05:03.991
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {PRIMARY RESOURCE}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:05:05.029
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/src)[*]
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:05:18.732
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {PRIMARY RESOURCE}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:05:19.823
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:05:34.789
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {PRIMARY RESOURCE}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:05:35.073
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:13.027
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:13.208
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:16.288
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:16.455
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:32.673
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:32.860
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:39.072
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] DailyController.java[*]: {CONTENT | FINE GRAINED | PRIMARY RESOURCE}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 14:07:39.592
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
