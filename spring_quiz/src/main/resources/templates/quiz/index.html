@@ -1,14 +1,12 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="utf-8">
-<title>三択クイズ</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css}"/>
 </head>
 <body>
-<h1>三択クイズ</h1>
-<a href="/daily">日記へ</a>
-<a href="/bug">404号室へご案内</a>
-<hr>
+<div th:replace="header::header"></div>
+<body style="background-color:#FFFFCC; text-align: center;">
 <h2>問題</h2>
 <div id="text_q"></div>
 <h2>選択</h2>
