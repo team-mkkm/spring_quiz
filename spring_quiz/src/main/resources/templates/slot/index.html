@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css}"/>
+<title>カジノ</title>
 <script type="text/javascript">
 	//スロットが回る早さを指定する
 	hayasa = 30;
@@ -263,7 +264,7 @@
 </script>
 </head>
 <body onLoad="hajime();">
-
+<div th:replace="header::header"></div>
 	<form name="form1">
 		<table border="1" align="center">
 			<tr>

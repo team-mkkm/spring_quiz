@@ -13,4 +13,11 @@ public class QuizController {
 		return "quiz/index";
 	}
 	
+	@RequestMapping(path = "/")
+	public String top() {
+		return "quiz/index";
+	}
+
+	
+	
 }

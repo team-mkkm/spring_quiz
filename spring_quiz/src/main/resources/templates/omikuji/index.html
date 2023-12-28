@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>神社</title>
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css}"/>
 <script type="text/javascript">
 function omikuji()
 {jikoku=new Date();
@@ -31,6 +32,7 @@ document.close();
 </script>
 </head>
 <body>
+<div th:replace="header::header"></div>
 <form>
 <input type="button" value="御神籤" onClick="omikuji();">
 </form><br>

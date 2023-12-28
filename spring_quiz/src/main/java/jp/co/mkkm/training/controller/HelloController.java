@@ -23,4 +23,5 @@ public class HelloController {
 		return "slot/index";
 	}
 	
+	
 }
