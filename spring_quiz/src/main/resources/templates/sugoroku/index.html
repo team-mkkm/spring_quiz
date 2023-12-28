@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>マツザキスゴロク</title>
+<link th:href="@{/css/sugoroku.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="center-container">		
+		<div class="contents">
+			<h1 id="titleName">マツザキスゴロク</h1>
+			<form method = "post" th:action="@{/sugoroku/play}" id="nameForm">
+				<input type="text" name="playerName" placeholder="tarou">
+				<input type="submit" name="play" value="決定" class="btn-square">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
