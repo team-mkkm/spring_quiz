@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title></title>
+<style>
+  th, td {background-color: #eef; padding: 10px; }
+</style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>ユーザー番号</th>
+	<td th:text="${user.id}"></td>
+  </tr>
+  <tr>
+    <th>ユーザーID</th>
+    <td th:text="${user.userId}"></td>
+  </tr>
+  <tr>
+    <th>パスワード</th>
+	<td th:text="${user.password}"></td>
+  </tr>
+</table>
+
+<a href="/lesson02_03/edit">変更</a>
+</body>
+</html>

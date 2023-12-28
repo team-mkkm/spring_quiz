@@ -1,0 +1,1132 @@
+!SESSION 2023-12-28 13:14:25.248 -----------------------------------------------
+eclipse.buildId=4.0.0.201809220817-RELEASE
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -data C:\spring_quiz -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2023-12-28 13:14:36.176
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-12-28 13:14:36.176
+!MESSAGE CTRL+SHIFT+T の競合が発生しました:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,型を開く,
+		型を Java エディターで開きます,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18f4086e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,ワークスペース内のシンボルにジャンプ,
+		,
+		Category(org.eclipse.lsp4e.category,言語サーバー,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@43cbafa6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-12-28 13:14:45.159
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\リアプロ研修受講生'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2023-12-28 13:16:17.207
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.ui.projectPropertyPage (bundle: org.springframework.ide.eclipse.boot.validation, propertyPage: org.springframework.ide.eclipse.boot.validation.preferences.BootValidationProjectPropertyPage)
+
+!ENTRY org.eclipse.ui 4 0 2023-12-28 13:22:50.708
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4595)
+	at org.eclipse.swt.SWT.error(SWT.java:4510)
+	at org.eclipse.swt.SWT.error(SWT.java:4481)
+	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1371)
+	at org.eclipse.swt.internal.ImageList.set(ImageList.java:365)
+	at org.eclipse.swt.internal.ImageList.add(ImageList.java:52)
+	at org.eclipse.swt.widgets.Tree.imageIndex(Tree.java:3668)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7346)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5809)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:2004)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5367)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4824)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4784)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2203)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1554)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:5963)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4792)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2309)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3559)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:53.724
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.368
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZamkOHuq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.369
+!MESSAGE subscribing to classpath changes: sts4.classpath.ZamkOHuq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.371
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.373
+!MESSAGE subsribers = [sts4.classpath.ZamkOHuq]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.373
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.377
+!MESSAGE project spring_quiz ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.378
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.379
+!MESSAGE Preparing classpath changed notification spring_quiz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.379
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZamkOHuq => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.380
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-12-28 13:34:56.392
+!MESSAGE 
+!STACK 0
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:50)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.setPath(Classpath.java:93)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.<init>(Classpath.java:77)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.binary(Classpath.java:114)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:82)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.393
+!MESSAGE executing callback sts4.classpath.ZamkOHuq spring_quiz false 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:56.742
+!MESSAGE executing callback sts4.classpath.ZamkOHuq SUCCESS [終了しました]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:57.831
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training.util[*]: {CHILDREN}
+				Login.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:57.842
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZamkOHuq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:57.844
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ZamkOHuq
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:57.845
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:34:57.845
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZamkOHuq => OK
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-12-28 13:35:02.332
+!MESSAGE java.util.concurrent.CancellationException
+!STACK 0
+java.util.concurrent.ExecutionException: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.eclipse.lsp4e.LanguageServerWrapper.getServerCapabilities(LanguageServerWrapper.java:563)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$8(LanguageServiceAccessor.java:372)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1694)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getMatchingStartedWrappers(LanguageServiceAccessor.java:374)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:284)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSPDocumentInfosFor(LanguageServiceAccessor.java:444)
+	at org.eclipse.lsp4e.operations.color.DocumentColorProvider.lambda$0(DocumentColorProvider.java:53)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1764)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1756)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:295)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2474)
+	at org.eclipse.lsp4e.LanguageServerWrapper.stop(LanguageServerWrapper.java:322)
+	at org.eclipse.lsp4e.LanguageServerWrapper.disconnect(LanguageServerWrapper.java:478)
+	at org.eclipse.lsp4e.LanguageServerWrapper$1.bufferDisposed(LanguageServerWrapper.java:117)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$12.run(TextFileBufferManager.java:789)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireBufferDisposed(TextFileBufferManager.java:786)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.disconnect(TextFileBufferManager.java:206)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.disposeFileInfo(TextFileDocumentProvider.java:698)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.disposeFileInfo(CompilationUnitDocumentProvider.java:1268)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.disconnect(TextFileDocumentProvider.java:655)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.disconnect(CompilationUnitDocumentProvider.java:1336)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.disposeDocumentProvider(AbstractTextEditor.java:4466)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.disposeDocumentProvider(AbstractDecoratedTextEditor.java:1458)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.dispose(AbstractTextEditor.java:4348)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.dispose(AbstractDecoratedTextEditor.java:389)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.dispose(JavaEditor.java:2682)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.dispose(CompilationUnitEditor.java:1524)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.invalidate(CompatibilityPart.java:264)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.destroy(CompatibilityPart.java:424)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1001)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:966)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.uninject(InjectorImpl.java:200)
+	at org.eclipse.e4.core.internal.di.Requestor.uninject(Requestor.java:175)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:87)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:114)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.removeListenersTo(EclipseContext.java:492)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.uninject(ContextInjectionFactory.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:967)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:886)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:881)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:865)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:186)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:91)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:204)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:199)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:138)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:81)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:42)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:307)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1381)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1311)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1269)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$0(StackRenderer.java:1255)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1123)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1961)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:336)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.350
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sZlEbEEn
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.351
+!MESSAGE subscribing to classpath changes: sts4.classpath.sZlEbEEn
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.351
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.352
+!MESSAGE subsribers = [sts4.classpath.sZlEbEEn]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.353
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.354
+!MESSAGE project spring_quiz ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.354
+!MESSAGE Preparing classpath changed notification spring_quiz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.355
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.355
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.356
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sZlEbEEn => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-12-28 13:35:09.362
+!MESSAGE 
+!STACK 0
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:50)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.setPath(Classpath.java:93)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.<init>(Classpath.java:77)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.binary(Classpath.java:114)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:82)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.363
+!MESSAGE executing callback sts4.classpath.sZlEbEEn spring_quiz false 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:09.660
+!MESSAGE executing callback sts4.classpath.sZlEbEEn SUCCESS [終了しました]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:18.915
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training.filter[-]: {}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:19.261
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:37.087
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/application.properties)[*]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:35:37.249
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.eclipse.ui 4 0 2023-12-28 13:35:47.361
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4595)
+	at org.eclipse.swt.SWT.error(SWT.java:4510)
+	at org.eclipse.swt.SWT.error(SWT.java:4481)
+	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1371)
+	at org.eclipse.swt.internal.ImageList.set(ImageList.java:365)
+	at org.eclipse.swt.internal.ImageList.add(ImageList.java:52)
+	at org.eclipse.swt.widgets.Tree.imageIndex(Tree.java:3668)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7346)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5809)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:2004)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5367)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4824)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4784)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2203)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1554)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:5963)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4792)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2309)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3559)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+
+!ENTRY org.eclipse.ui 4 0 2023-12-28 13:35:51.847
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4595)
+	at org.eclipse.swt.SWT.error(SWT.java:4510)
+	at org.eclipse.swt.SWT.error(SWT.java:4481)
+	at org.eclipse.swt.graphics.Image.getImageData(Image.java:1371)
+	at org.eclipse.swt.internal.ImageList.set(ImageList.java:365)
+	at org.eclipse.swt.internal.ImageList.add(ImageList.java:52)
+	at org.eclipse.swt.widgets.Tree.imageIndex(Tree.java:3668)
+	at org.eclipse.swt.widgets.Tree.wmNotifyChild(Tree.java:7346)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5809)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:2004)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5367)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4824)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4784)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProcW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(OS.java:2203)
+	at org.eclipse.swt.widgets.Tree.callWindowProc(Tree.java:1554)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4867)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:5963)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4792)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2309)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3559)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:12.588
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training[*]: {CHILDREN}
+				[Working copy] SpringTrainingApplication.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:12.591
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training[*]: {CHILDREN}
+				SpringTrainingApplication.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:12.621
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training[*]: {CHILDREN}
+				[Working copy] SpringTrainingApplication.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:12.623
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training[*]: {CHILDREN}
+				SpringTrainingApplication.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:15.220
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm[+]: {}
+			jp.co.mkkm.training[+]: {}
+			jp.co.sss.training[*]: {CHILDREN}
+				SpringTrainingApplication.java[-]: {MOVED_TO(SpringTrainingApplication.java [in jp.co.mkkm.training [in src/main/java [in spring_quiz]]])}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:15.933
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:26.487
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training.config[-]: {MOVED_TO(jp.co.mkkm.training.config [in src/main/java [in spring_quiz]])}
+			jp.co.mkkm.training.config[+]: {MOVED_FROM(jp.co.sss.training.config [in src/main/java [in spring_quiz]])}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:27.026
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:36.539
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training.controller[-]: {MOVED_TO(jp.co.mkkm.training.controller [in src/main/java [in spring_quiz]])}
+			jp.co.mkkm.training.controller[+]: {MOVED_FROM(jp.co.sss.training.controller [in src/main/java [in spring_quiz]])}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:37.174
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:50.635
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training.dto[-]: {MOVED_TO(jp.co.mkkm.training.dto [in src/main/java [in spring_quiz]])}
+			jp.co.mkkm.training.dto[+]: {MOVED_FROM(jp.co.sss.training.dto [in src/main/java [in spring_quiz]])}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:36:51.190
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:03.654
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.sss.training.entity[-]: {MOVED_TO(jp.co.mkkm.training.entity [in src/main/java [in spring_quiz]])}
+			jp.co.mkkm.training.entity[+]: {MOVED_FROM(jp.co.sss.training.entity [in src/main/java [in spring_quiz]])}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:04.092
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:15.845
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				HelloController.java[*]: {CONTENT | PRIMARY WORKING COPY | PRIMARY RESOURCE}
+			jp.co.sss.training.form[-]: {MOVED_TO(jp.co.mkkm.training.form [in src/main/java [in spring_quiz]])}
+			jp.co.mkkm.training.form[+]: {MOVED_FROM(jp.co.sss.training.form [in src/main/java [in spring_quiz]])}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:16.250
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:26.412
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.form[*]: {CHILDREN}
+				MyForm.java[*]: {CONTENT | PRIMARY WORKING COPY | PRIMARY RESOURCE}
+			jp.co.sss.training.util[-]: {MOVED_TO(jp.co.mkkm.training.util [in src/main/java [in spring_quiz]])}
+			jp.co.mkkm.training.util[+]: {MOVED_FROM(jp.co.sss.training.util [in src/main/java [in spring_quiz]])}
+			jp.co.sss[-]: {}
+			jp.co.sss.training[-]: {}
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:26.861
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-12-28 13:37:46.783
+!MESSAGE Could not determine source level, using default 1.5
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-12-28 13:37:46.784
+!MESSAGE Could not determine target level, using default 1.5
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:47.590
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/java[*]: {CHILDREN | CONTENT}
+			jp[*]: {CONTENT}
+			jp.co[*]: {CONTENT}
+			jp.co.mkkm[*]: {CONTENT}
+			jp.co.mkkm.training[*]: {CHILDREN | CONTENT}
+				SpringTrainingApplication.java[*]: {CONTENT | PRIMARY RESOURCE}
+			jp.co.mkkm.training.config[*]: {CHILDREN | CONTENT}
+				FilterConfig.java[*]: {CONTENT | PRIMARY RESOURCE}
+			jp.co.mkkm.training.controller[*]: {CHILDREN | CONTENT}
+				HelloController.java[*]: {CONTENT | PRIMARY RESOURCE}
+				QuizController.java[*]: {CONTENT | PRIMARY RESOURCE}
+			jp.co.mkkm.training.dto[*]: {CHILDREN | CONTENT}
+				User0405Dto.java[*]: {CONTENT | PRIMARY RESOURCE}
+			jp.co.mkkm.training.entity[*]: {CHILDREN | CONTENT}
+				Department.java[*]: {CONTENT | PRIMARY RESOURCE}
+				Food.java[*]: {CONTENT | PRIMARY RESOURCE}
+				Item.java[*]: {CONTENT | PRIMARY RESOURCE}
+				Lesson0404User.java[*]: {CONTENT | PRIMARY RESOURCE}
+				TrainingUser.java[*]: {CONTENT | PRIMARY RESOURCE}
+			jp.co.mkkm.training.form[*]: {CHILDREN | CONTENT}
+				LoginForm.java[*]: {CONTENT | PRIMARY RESOURCE}
+				MyForm.java[*]: {CONTENT | PRIMARY RESOURCE}
+				User0501Form.java[*]: {CONTENT | PRIMARY RESOURCE}
+				User0502Form.java[*]: {CONTENT | PRIMARY RESOURCE}
+			jp.co.mkkm.training.util[*]: {CHILDREN | CONTENT}
+				Login.java[*]: {CONTENT | PRIMARY RESOURCE}
+				LoginValidator.java[*]: {CONTENT | PRIMARY RESOURCE}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/ValidationMessages.properties)[*]
+			ResourceDelta(/spring_quiz/src/main/resources/application.properties)[*]
+			ResourceDelta(/spring_quiz/src/main/resources/jp)[*]
+			ResourceDelta(/spring_quiz/src/main/resources/lib)[*]
+			ResourceDelta(/spring_quiz/src/main/resources/messages.properties)[*]
+			ResourceDelta(/spring_quiz/src/main/resources/mybatis-config.xml)[*]
+			ResourceDelta(/spring_quiz/src/main/resources/static)[*]
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		src/test/java[*]: {CHILDREN | CONTENT}
+			jp[*]: {CONTENT}
+			jp.co[*]: {CONTENT}
+			jp.co.sss[*]: {CONTENT}
+			jp.co.sss.training[*]: {CHILDREN | CONTENT}
+				SpringTrainingApplicationTests.java[*]: {CONTENT | PRIMARY RESOURCE}
+		target/generated-sources/annotations[*]: {CONTENT}
+		target/generated-test-sources/test-annotations[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target/generated-sources)[*]
+		ResourceDelta(/spring_quiz/target/generated-test-sources)[*]
+		ResourceDelta(/spring_quiz/target/maven-status)[*]
+		ResourceDelta(/spring_quiz/.classpath)[*]
+		ResourceDelta(/spring_quiz/.gitignore)[*]
+		ResourceDelta(/spring_quiz/.mvn)[*]
+		ResourceDelta(/spring_quiz/.project)[*]
+		ResourceDelta(/spring_quiz/.settings)[*]
+		ResourceDelta(/spring_quiz/HELP.md)[*]
+		ResourceDelta(/spring_quiz/mvnw)[*]
+		ResourceDelta(/spring_quiz/mvnw.cmd)[*]
+		ResourceDelta(/spring_quiz/pom.xml)[*]
+		ResourceDelta(/spring_quiz/src)[*]
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:47.770
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:49.547
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:37:50.376
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:38:59.061
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] HelloController.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:39:01.834
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				HelloController.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-12-28 13:39:10.922
+!MESSAGE プラットフォーム・シャットダウン後にまだ実行中のジョブが見つかりました。 ジョブはシャットダウン時にスケジュールされたプラグインによってキャンセルされる必要があります: org.springframework.tooling.ls.eclipse.commons.STS4LanguageServerProcessStreamConnector$1
+!SESSION 2023-12-28 13:39:12.311 -----------------------------------------------
+eclipse.buildId=4.0.0.201809220817-RELEASE
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -data file:/C:/spring_quiz/ -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2023-12-28 13:39:22.764
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-12-28 13:39:22.764
+!MESSAGE CTRL+SHIFT+T の競合が発生しました:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,型を開く,
+		型を Java エディターで開きます,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@67cd84f9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,ワークスペース内のシンボルにジャンプ,
+		,
+		Category(org.eclipse.lsp4e.category,言語サーバー,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52b891de,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-12-28 13:39:31.534
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\リアプロ研修受講生'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:11.178
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.350
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZlSqNaMY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.351
+!MESSAGE subscribing to classpath changes: sts4.classpath.ZlSqNaMY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.353
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.356
+!MESSAGE subsribers = [sts4.classpath.ZlSqNaMY]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.356
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.359
+!MESSAGE project spring_quiz ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.361
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.362
+!MESSAGE Preparing classpath changed notification spring_quiz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.362
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZlSqNaMY => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.363
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-12-28 13:40:16.387
+!MESSAGE 
+!STACK 0
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:50)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.setPath(Classpath.java:93)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.<init>(Classpath.java:77)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.binary(Classpath.java:114)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:82)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:16.391
+!MESSAGE executing callback sts4.classpath.ZlSqNaMY spring_quiz false 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:40:17.348
+!MESSAGE executing callback sts4.classpath.ZlSqNaMY SUCCESS [終了しました]
+
+!ENTRY org.eclipse.ui 2 2 2023-12-28 13:40:44.471
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.ui.projectPropertyPage (bundle: org.springframework.ide.eclipse.boot.validation, propertyPage: org.springframework.ide.eclipse.boot.validation.preferences.BootValidationProjectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:42:51.614
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training[*]: {CHILDREN}
+				SpringTrainingApplication.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:42:51.635
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZlSqNaMY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:42:51.636
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.ZlSqNaMY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:42:51.637
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:42:51.638
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZlSqNaMY => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.003
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mjAWNUXz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.005
+!MESSAGE subscribing to classpath changes: sts4.classpath.mjAWNUXz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.005
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.007
+!MESSAGE subsribers = [sts4.classpath.mjAWNUXz]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.007
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.009
+!MESSAGE project spring_quiz ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.009
+!MESSAGE Preparing classpath changed notification spring_quiz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.010
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.010
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.011
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.mjAWNUXz => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-12-28 13:43:19.024
+!MESSAGE 
+!STACK 0
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:50)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.setPath(Classpath.java:93)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.<init>(Classpath.java:77)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.binary(Classpath.java:114)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:82)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.026
+!MESSAGE executing callback sts4.classpath.mjAWNUXz spring_quiz false 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.347
+!MESSAGE executing callback sts4.classpath.mjAWNUXz SUCCESS [終了しました]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.637
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.form[*]: {CHILDREN}
+				MyForm.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.665
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mjAWNUXz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.667
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.mjAWNUXz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.667
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:19.668
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.mjAWNUXz => OK
+
+!ENTRY org.eclipse.lsp4e 4 0 2023-12-28 13:43:23.186
+!MESSAGE java.util.concurrent.CancellationException
+!STACK 0
+java.util.concurrent.ExecutionException: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2092)
+	at org.eclipse.lsp4e.LanguageServerWrapper.getServerCapabilities(LanguageServerWrapper.java:563)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$8(LanguageServiceAccessor.java:372)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.HashMap$KeySpliterator.forEachRemaining(HashMap.java:1694)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getMatchingStartedWrappers(LanguageServiceAccessor.java:374)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:284)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSPDocumentInfosFor(LanguageServiceAccessor.java:444)
+	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$0(CodeLensProvider.java:35)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1764)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1756)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:295)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2474)
+	at org.eclipse.lsp4e.LanguageServerWrapper.stop(LanguageServerWrapper.java:322)
+	at org.eclipse.lsp4e.LanguageServerWrapper.disconnect(LanguageServerWrapper.java:478)
+	at org.eclipse.lsp4e.LanguageServerWrapper$1.bufferDisposed(LanguageServerWrapper.java:117)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$12.run(TextFileBufferManager.java:789)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireBufferDisposed(TextFileBufferManager.java:786)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.disconnect(TextFileBufferManager.java:206)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.disposeFileInfo(TextFileDocumentProvider.java:698)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.disposeFileInfo(CompilationUnitDocumentProvider.java:1268)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.disconnect(TextFileDocumentProvider.java:655)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.disconnect(CompilationUnitDocumentProvider.java:1336)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.disposeDocumentProvider(AbstractTextEditor.java:4466)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.disposeDocumentProvider(AbstractDecoratedTextEditor.java:1458)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.dispose(AbstractTextEditor.java:4348)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.dispose(AbstractDecoratedTextEditor.java:389)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.dispose(JavaEditor.java:2682)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.dispose(CompilationUnitEditor.java:1524)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.invalidate(CompatibilityPart.java:264)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.destroy(CompatibilityPart.java:424)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:1001)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:966)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.uninject(InjectorImpl.java:200)
+	at org.eclipse.e4.core.internal.di.Requestor.uninject(Requestor.java:175)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:87)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:114)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.removeListenersTo(EclipseContext.java:492)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.uninject(ContextInjectionFactory.java:175)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:967)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:886)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:881)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:865)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:186)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:91)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:204)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:199)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:138)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:81)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:42)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:307)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1381)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1311)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1269)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$0(StackRenderer.java:1255)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$3.close(StackRenderer.java:1123)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1961)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:336)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4145)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1055)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3958)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3561)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.223
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EnTKTHPk
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.224
+!MESSAGE subscribing to classpath changes: sts4.classpath.EnTKTHPk
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.225
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.227
+!MESSAGE subsribers = [sts4.classpath.EnTKTHPk]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.227
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.eclipse.ui 4 0 2023-12-28 13:43:30.229
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.ui.IEditorPart.getEditorInput()" because "activeEditor" is null
+	at org.springframework.tooling.ls.eclipse.commons.ProjectSorter$1.run(ProjectSorter.java:39)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3933)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3564)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:628)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:155)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:199)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:391)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:246)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.232
+!MESSAGE project spring_quiz ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.233
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.235
+!MESSAGE Preparing classpath changed notification spring_quiz
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.235
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.236
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EnTKTHPk => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-12-28 13:43:30.241
+!MESSAGE 
+!STACK 0
+java.lang.IllegalArgumentException: 
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:50)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.setPath(Classpath.java:93)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.<init>(Classpath.java:77)
+	at org.springframework.tooling.jdt.ls.commons.classpath.Classpath$CPE.binary(Classpath.java:114)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ClasspathUtil.resolve(ClasspathUtil.java:82)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$Subscriptions$2.run(ReusableClasspathListenerHandler.java:171)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.243
+!MESSAGE executing callback sts4.classpath.EnTKTHPk spring_quiz false 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:30.535
+!MESSAGE executing callback sts4.classpath.EnTKTHPk SUCCESS [終了しました]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:31.810
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.entity[*]: {CHILDREN}
+				[Working copy] Lesson0404User.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:34.743
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.entity[*]: {CHILDREN}
+				Lesson0404User.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:39.624
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				[Working copy] HelloController.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:44.988
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.controller[*]: {CHILDREN}
+				HelloController.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:48.741
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.config[*]: {CHILDREN}
+				[Working copy] FilterConfig.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:43:52.253
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN}
+		src/main/java[*]: {CHILDREN}
+			jp.co.mkkm.training.config[*]: {CHILDREN}
+				FilterConfig.java[*]: {PRIMARY WORKING COPY}]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:46:18.847
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:46:20.735
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:48:41.312
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:48:41.772
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:48:46.347
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CHILDREN | CONTENT}
+		src/main/resources[*]: {CONTENT}
+			ResourceDelta(/spring_quiz/src/main/resources/templates)[*]
+		ResourceDelta(/spring_quiz/src)[*]]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-12-28 13:48:46.785
+!MESSAGE changeEvent = org.eclipse.jdt.core.ElementChangedEvent[source=Java Model[*]: {CHILDREN}
+	spring_quiz[*]: {CONTENT}
+		ResourceDelta(/spring_quiz/target)[*]]
