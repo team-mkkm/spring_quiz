@@ -10,6 +10,6 @@ public class DailyController {
 	public String quiz() {
 		return "daily/dailyapp";
 	}	
-	
+		
 
 }
