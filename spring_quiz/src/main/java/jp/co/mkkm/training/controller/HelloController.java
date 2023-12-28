@@ -12,4 +12,15 @@ public class HelloController {
 	public String hello() {
 		return "tetoris/index";
 	}
+	
+	@RequestMapping(path = "/omikuji")
+	public String omikuji() {
+		return "omikuji/index";
+	}
+
+	@RequestMapping(path = "/slot")
+	public String slot() {
+		return "slot/index";
+	}
+	
 }

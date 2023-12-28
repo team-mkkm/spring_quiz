@@ -1,420 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>テトリス</title>
-      <style>
-        #container{
-          position: relative;
-          margin: auto;
-          width: 700px;
-        }
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テトリス</title>
+<style>
+#container {
+	position: relative;
+	margin: auto;
+	width: 700px;
+}
 
-        #next-canvas{
-          position: absolute; 
-          top: 0;
-          left:400px;
-        }
+#next-canvas {
+	position: absolute;
+	top: 0;
+	left: 400px;
+}
 
-        #img-howto{
-          position: absolute;
-          bottom: 200px;
-          left: 360px;
-        }
+#img-howto {
+	position: absolute;
+	bottom: 200px;
+	left: 360px;
+}
 
-        #start-btn {
-          position: absolute;
-          left: 400px;
-          bottom: 0;
-          width: 180px;
-          text-align: center;
-          font-size: 16px;
-          color: #FFF;
-          text-decoration: none;
-          font-weight: bold;
-          padding: 12px 24px;
-          border:none;
-          border-radius: 4px;
-          background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-          transition: .5s;
-          background-size: 200%;
-        }
+#start-btn {
+	position: absolute;
+	left: 400px;
+	bottom: 0;
+	width: 180px;
+	text-align: center;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 4px;
+	background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+	transition: .5s;
+	background-size: 200%;
+}
 
-        #start-btn:hover {
-          background-position: right center;
-        }
-      </style>
-  </head>
-  <body>
-    <div id="container">
-      <canvas id="main-canvas"></canvas>
-        <canvas id="next-canvas"></canvas>
-        <img id="img-howto" src="images/howto.png">
-        <button id="start-btn">開始</button>
-    </div>
-    <script>
-    const SATRT_BTN_ID = "start-btn"
-    	const MAIN_CANVAS_ID = "main-canvas"
-    	const NEXT_CANVAS_ID = "next-canvas"
-    	const GAME_SPEED = 500;
-    	const BLOCK_SIZE = 32;
-    	const COLS_COUNT = 10;
-    	const ROWS_COUNT = 20;
-    	const SCREEN_WIDTH = COLS_COUNT * BLOCK_SIZE;
-    	const SCREEN_HEIGHT = ROWS_COUNT * BLOCK_SIZE;
-    	const NEXT_AREA_SIZE = 160;
-    	const BLOCK_SOURCES = [
-    	        "images/block-0.png",
-    	        "images/block-1.png",
-    	        "images/block-2.png",
-    	        "images/block-3.png",
-    	        "images/block-4.png",
-    	        "images/block-5.png",
-    	        "images/block-6.png"
-    	    ]
+#start-btn:hover {
+	background-position: right center;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<canvas id="main-canvas"></canvas>
+		<canvas id="next-canvas"></canvas>
+		<img id="img-howto" src="images/howto.png">
+		<button id="start-btn">開始</button>
+	</div>
 
-    	window.onload = function(){
-    	  Asset.init()
-    	  let game = new Game()
-    	  document.getElementById(SATRT_BTN_ID).onclick = function(){
-    	      game.start()
-    	      this.blur() // ボタンのフォーカスを外す
-    	  }
-    	}
+	<script type="text/javascript">
+	const SATRT_BTN_ID = "start-btn"
+		const MAIN_CANVAS_ID = "main-canvas"
+		const NEXT_CANVAS_ID = "next-canvas"
+		const GAME_SPEED = 500;
+		const BLOCK_SIZE = 32;
+		const COLS_COUNT = 10;
+		const ROWS_COUNT = 20;
+		const SCREEN_WIDTH = COLS_COUNT * BLOCK_SIZE;
+		const SCREEN_HEIGHT = ROWS_COUNT * BLOCK_SIZE;
+		const NEXT_AREA_SIZE = 160;
+		const BLOCK_SOURCES = [
+		        "images/block-0.png",
+		        "images/block-1.png",
+		        "images/block-2.png",
+		        "images/block-3.png",
+		        "images/block-4.png",
+		        "images/block-5.png",
+		        "images/block-6.png"
+		    ]
 
-    	// 素材を管理するクラス
-    	// ゲーム開始前に初期化する
-    	class Asset{
-    	    // ブロック用Imageの配列
-    	    static blockImages = []
+		window.onload = function(){
+		  Asset.init()
+		  let game = new Game()
+		  document.getElementById(SATRT_BTN_ID).onclick = function(){
+		      game.start()
+		      this.blur() // ボタンのフォーカスを外す
+		  }
+		}
 
-    	    // 初期化処理
-    	    // callback には、init完了後に行う処理を渡す
-    	    static init(callback){
-    	        let loadCnt = 0
-    	        for(let i = 0; i <= 6; i++){
-    	            let img = new Image();
-    	            img.src = BLOCK_SOURCES[i];
-    	            img.onload = function(){
-    	                loadCnt++
-    	                Asset.blockImages.push(img)
+		// 素材を管理するクラス
+		// ゲーム開始前に初期化する
+		class Asset{
+		    // ブロック用Imageの配列
+		    static blockImages = []
 
-    	                // 全ての画像読み込みが終われば、callback実行
-    	                if(loadCnt >= BLOCK_SOURCES.length && callback){
-    	                    callback()
-    	                }
-    	            }
-    	        }
-    	    }
-    	}
+		    // 初期化処理
+		    // callback には、init完了後に行う処理を渡す
+		    static init(callback){
+		        let loadCnt = 0
+		        for(let i = 0; i <= 6; i++){
+		            let img = new Image();
+		            img.src = BLOCK_SOURCES[i];
+		            img.onload = function(){
+		                loadCnt++
+		                Asset.blockImages.push(img)
 
-    	class Game{
-    	    constructor(){
-    	        this.initMainCanvas()
-    	        this.initNextCanvas()
-    	    }
+		                // 全ての画像読み込みが終われば、callback実行
+		                if(loadCnt >= BLOCK_SOURCES.length && callback){
+		                    callback()
+		                }
+		            }
+		        }
+		    }
+		}
 
-    	    // メインキャンバスの初期化
-    	    initMainCanvas(){
-    	        this.mainCanvas = document.getElementById(MAIN_CANVAS_ID);
-    	        this.mainCtx = this.mainCanvas.getContext("2d");
-    	        this.mainCanvas.width = SCREEN_WIDTH;
-    	        this.mainCanvas.height = SCREEN_HEIGHT;
-    	        this.mainCanvas.style.border = "4px solid #555";
-    	    }
+		class Game{
+		    constructor(){
+		        this.initMainCanvas()
+		        this.initNextCanvas()
+		    }
 
-    	    // ネクストキャンバスの初期化
-    	    initNextCanvas(){
-    	        this.nextCanvas = document.getElementById(NEXT_CANVAS_ID);
-    	        this.nextCtx = this.nextCanvas.getContext("2d");
-    	        this.nextCanvas.width = NEXT_AREA_SIZE
-    	        this.nextCanvas.height = NEXT_AREA_SIZE;
-    	        this.nextCanvas.style.border = "4px solid #555";
-    	    }
+		    // メインキャンバスの初期化
+		    initMainCanvas(){
+		        this.mainCanvas = document.getElementById(MAIN_CANVAS_ID);
+		        this.mainCtx = this.mainCanvas.getContext("2d");
+		        this.mainCanvas.width = SCREEN_WIDTH;
+		        this.mainCanvas.height = SCREEN_HEIGHT;
+		        this.mainCanvas.style.border = "4px solid #555";
+		    }
 
-    	    // ゲームの開始処理（STARTボタンクリック時）
-    	    start(){
-    	        // フィールドとミノの初期化
-    	        this.field = new Field()
+		    // ネクストキャンバスの初期化
+		    initNextCanvas(){
+		        this.nextCanvas = document.getElementById(NEXT_CANVAS_ID);
+		        this.nextCtx = this.nextCanvas.getContext("2d");
+		        this.nextCanvas.width = NEXT_AREA_SIZE
+		        this.nextCanvas.height = NEXT_AREA_SIZE;
+		        this.nextCanvas.style.border = "4px solid #555";
+		    }
 
-    	        // 最初のミノを読み込み
-    	        this.popMino()
+		    // ゲームの開始処理（STARTボタンクリック時）
+		    start(){
+		        // フィールドとミノの初期化
+		        this.field = new Field()
 
-    	        // 初回描画
-    	        this.drawAll()
+		        // 最初のミノを読み込み
+		        this.popMino()
 
-    	        // 落下処理
-    	        clearInterval(this.timer)
-    	        this.timer = setInterval(() => this.dropMino(), 1000);
+		        // 初回描画
+		        this.drawAll()
 
-    	        // キーボードイベントの登録
-    	        this.setKeyEvent()
-    	    }
+		        // 落下処理
+		        clearInterval(this.timer)
+		        this.timer = setInterval(() => this.dropMino(), 1000);
 
-    	    // 新しいミノを読み込む
-    	    popMino(){
-    	        this.mino = this.nextMino ?? new Mino()
-    	        this.mino.spawn()
-    	        this.nextMino = new Mino()
+		        // キーボードイベントの登録
+		        this.setKeyEvent()
+		    }
 
-    	        // ゲームオーバー判定
-    	        if(!this.valid(0, 1)){
-    	            this.drawAll()
-    	            clearInterval(this.timer)
-    	            alert("ゲームオーバー")
-    	        }
-    	    }
+		    // 新しいミノを読み込む
+		    popMino(){
+		        this.mino = this.nextMino ?? new Mino()
+		        this.mino.spawn()
+		        this.nextMino = new Mino()
 
-    	    // 画面の描画
-    	    drawAll(){
-    	        // 表示クリア
-    	        this.mainCtx.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
-    	        this.nextCtx.clearRect(0, 0, NEXT_AREA_SIZE, NEXT_AREA_SIZE)
+		        // ゲームオーバー判定
+		        if(!this.valid(0, 1)){
+		            this.drawAll()
+		            clearInterval(this.timer)
+		            alert("ゲームオーバー")
+		        }
+		    }
 
-    	        // 落下済みのミノを描画
-    	        this.field.drawFixedBlocks(this.mainCtx)
+		    // 画面の描画
+		    drawAll(){
+		        // 表示クリア
+		        this.mainCtx.clearRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+		        this.nextCtx.clearRect(0, 0, NEXT_AREA_SIZE, NEXT_AREA_SIZE)
 
-    	        // 再描画
-    	        this.nextMino.drawNext(this.nextCtx)
-    	        this.mino.draw(this.mainCtx)
-    	    }
+		        // 落下済みのミノを描画
+		        this.field.drawFixedBlocks(this.mainCtx)
 
-    	    // ミノの落下処理
-    	    dropMino(){
-    	        if(this.valid(0, 1)) {
-    	            this.mino.y++;
-    	        }else{
-    	            // Minoを固定する（座標変換してFieldに渡す）
-    	            this.mino.blocks.forEach( e => {
-    	                e.x += this.mino.x
-    	                e.y += this.mino.y
-    	            })
-    	            this.field.blocks = this.field.blocks.concat(this.mino.blocks)
-    	            this.field.checkLine()
-    	            this.popMino()
-    	        }
-    	        this.drawAll();
-    	    }
-    	    
-    	    // 次の移動が可能かチェック
-    	    valid(moveX, moveY, rot=0){
-    	        let newBlocks = this.mino.getNewBlocks(moveX, moveY, rot)
-    	        return newBlocks.every(block => {
-    	            return (
-    	                block.x >= 0 &&
-    	                block.y >= -1 &&
-    	                block.x < COLS_COUNT &&
-    	                block.y < ROWS_COUNT &&
-    	                !this.field.has(block.x, block.y)
-    	            )
-    	        })
-    	    }
+		        // 再描画
+		        this.nextMino.drawNext(this.nextCtx)
+		        this.mino.draw(this.mainCtx)
+		    }
 
-    	    // キーボードイベント
-    	    setKeyEvent(){
-    	        document.onkeydown = function(e){
-    	            switch(e.keyCode){
-    	                case 37: // 左
-    	                    if( this.valid(-1, 0)) this.mino.x--;
-    	                    break;
-    	                case 39: // 右
-    	                    if( this.valid(1, 0)) this.mino.x++;
-    	                    break;
-    	                case 40: // 下
-    	                    if( this.valid(0, 1) ) this.mino.y++;
-    	                    break;
-    	                case 32: // スペース
-    	                    if( this.valid(0, 0, 1)) this.mino.rotate();
-    	                    break;
-    	            }
-    	            this.drawAll()
-    	        }.bind(this)
-    	    }
-    	}
+		    // ミノの落下処理
+		    dropMino(){
+		        if(this.valid(0, 1)) {
+		            this.mino.y++;
+		        }else{
+		            // Minoを固定する（座標変換してFieldに渡す）
+		            this.mino.blocks.forEach( e => {
+		                e.x += this.mino.x
+		                e.y += this.mino.y
+		            })
+		            this.field.blocks = this.field.blocks.concat(this.mino.blocks)
+		            this.field.checkLine()
+		            this.popMino()
+		        }
+		        this.drawAll();
+		    }
+		    
+		    // 次の移動が可能かチェック
+		    valid(moveX, moveY, rot=0){
+		        let newBlocks = this.mino.getNewBlocks(moveX, moveY, rot)
+		        return newBlocks.every(block => {
+		            return (
+		                block.x >= 0 &&
+		                block.y >= -1 &&
+		                block.x < COLS_COUNT &&
+		                block.y < ROWS_COUNT &&
+		                !this.field.has(block.x, block.y)
+		            )
+		        })
+		    }
 
-    	class Block{
-    	    // 基準地点からの座標
-    	    // 移動中 ⇒ Minoの左上
-    	    // 配置後 ⇒ Fieldの左上
-    	    constructor(x, y, type){
-    	        this.x = x
-    	        this.y = y
-    	        
-    	        // 描画しないときはタイプを指定しない
-    	        if(type >= 0) this.setType(type)
-    	    }
+		    // キーボードイベント
+		    setKeyEvent(){
+		        document.onkeydown = function(e){
+		            switch(e.keyCode){
+		                case 37: // 左
+		                    if( this.valid(-1, 0)) this.mino.x--;
+		                    break;
+		                case 39: // 右
+		                    if( this.valid(1, 0)) this.mino.x++;
+		                    break;
+		                case 40: // 下
+		                    if( this.valid(0, 1) ) this.mino.y++;
+		                    break;
+		                case 32: // スペース
+		                    if( this.valid(0, 0, 1)) this.mino.rotate();
+		                    break;
+		            }
+		            this.drawAll()
+		        }.bind(this)
+		    }
+		}
 
-    	    setType(type){
-    	        this.type = type
-    	        this.image = Asset.blockImages[type]
-    	    }
+		class Block{
+		    // 基準地点からの座標
+		    // 移動中 ⇒ Minoの左上
+		    // 配置後 ⇒ Fieldの左上
+		    constructor(x, y, type){
+		        this.x = x
+		        this.y = y
+		        
+		        // 描画しないときはタイプを指定しない
+		        if(type >= 0) this.setType(type)
+		    }
 
-    	    // Minoに属するときは、Minoの位置をオフセットに指定
-    	    // Fieldに属するときは、(0,0)を起点とするので不要
-    	    draw(offsetX = 0, offsetY = 0, ctx){
-    	        let drawX = this.x + offsetX
-    	        let drawY = this.y + offsetY
+		    setType(type){
+		        this.type = type
+		        this.image = Asset.blockImages[type]
+		    }
 
-    	        // 画面外は描画しない
-    	        if(drawX >= 0 && drawX < COLS_COUNT &&
-    	           drawY >= 0 && drawY < ROWS_COUNT){
-    	            ctx.drawImage(
-    	                this.image, 
-    	                drawX * BLOCK_SIZE, 
-    	                drawY * BLOCK_SIZE,
-    	                BLOCK_SIZE, 
-    	                BLOCK_SIZE
-    	            )
-    	        }
-    	    }
+		    // Minoに属するときは、Minoの位置をオフセットに指定
+		    // Fieldに属するときは、(0,0)を起点とするので不要
+		    draw(offsetX = 0, offsetY = 0, ctx){
+		        let drawX = this.x + offsetX
+		        let drawY = this.y + offsetY
 
-    	    // 次のミノを描画する
-    	    // タイプごとに余白を調整して、中央に表示
-    	    drawNext(ctx){
-    	        let offsetX = 0
-    	        let offsetY = 0
-    	        switch(this.type){
-    	            case 0:
-    	                offsetX = 0.5
-    	                offsetY = 0
-    	                break;
-    	            case 1:
-    	                offsetX = 0.5
-    	                offsetY = 0.5
-    	                break;
-    	            default:
-    	                offsetX = 1
-    	                offsetY = 0.5
-    	                break;
-    	        }
+		        // 画面外は描画しない
+		        if(drawX >= 0 && drawX < COLS_COUNT &&
+		           drawY >= 0 && drawY < ROWS_COUNT){
+		            ctx.drawImage(
+		                this.image, 
+		                drawX * BLOCK_SIZE, 
+		                drawY * BLOCK_SIZE,
+		                BLOCK_SIZE, 
+		                BLOCK_SIZE
+		            )
+		        }
+		    }
 
-    	        ctx.drawImage(
-    	            this.image, 
-    	            (this.x + offsetX) * BLOCK_SIZE, 
-    	            (this.y + offsetY) * BLOCK_SIZE,
-    	            BLOCK_SIZE, 
-    	            BLOCK_SIZE
-    	        )
-    	    }
-    	}
+		    // 次のミノを描画する
+		    // タイプごとに余白を調整して、中央に表示
+		    drawNext(ctx){
+		        let offsetX = 0
+		        let offsetY = 0
+		        switch(this.type){
+		            case 0:
+		                offsetX = 0.5
+		                offsetY = 0
+		                break;
+		            case 1:
+		                offsetX = 0.5
+		                offsetY = 0.5
+		                break;
+		            default:
+		                offsetX = 1
+		                offsetY = 0.5
+		                break;
+		        }
 
-    	class Mino{
-    	    constructor(){
-    	        this.type = Math.floor(Math.random() * 7);
-    	        this.initBlocks()
-    	    }
+		        ctx.drawImage(
+		            this.image, 
+		            (this.x + offsetX) * BLOCK_SIZE, 
+		            (this.y + offsetY) * BLOCK_SIZE,
+		            BLOCK_SIZE, 
+		            BLOCK_SIZE
+		        )
+		    }
+		}
 
-    	    initBlocks(){
-    	        let t = this.type
-    	        switch(t){
-    	            case 0: // I型
-    	                this.blocks = [new Block(0,2,t),new Block(1,2,t),new Block(2,2,t),new Block(3,2,t)]
-    	                break;
-    	            case 1: // O型
-    	                this.blocks = [new Block(1,1,t),new Block(2,1,t),new Block(1,2,t),new Block(2,2,t)]
-    	                break;
-    	            case 2: // T型
-    	                this.blocks = [new Block(1,1,t),new Block(0,2,t),new Block(1,2,t),new Block(2,2,t)]
-    	                break;
-    	            case 3: // J型
-    	                this.blocks = [new Block(1,1,t),new Block(0,2,t),new Block(1,2,t),new Block(2,2,t)]
-    	                break;
-    	            case 4: // L型
-    	                this.blocks = [new Block(2,1,t),new Block(0,2,t),new Block(1,2,t),new Block(2,2,t)]
-    	                break;
-    	            case 5: // S型
-    	                this.blocks = [new Block(1,1,t),new Block(2,1,t),new Block(0,2,t),new Block(1,2,t)]
-    	                break;
-    	            case 6: // Z型
-    	                this.blocks = [new Block(0,1,t),new Block(1,1,t),new Block(1,2,t),new Block(2,2,t)]
-    	                break;
-    	            }
-    	    }
+		class Mino{
+		    constructor(){
+		        this.type = Math.floor(Math.random() * 7);
+		        this.initBlocks()
+		    }
 
-    	    // フィールドに生成する
-    	    spawn(){
-    	        this.x = COLS_COUNT/2 - 2
-    	        this.y = -3
-    	    }
+		    initBlocks(){
+		        let t = this.type
+		        switch(t){
+		            case 0: // I型
+		                this.blocks = [new Block(0,2,t),new Block(1,2,t),new Block(2,2,t),new Block(3,2,t)]
+		                break;
+		            case 1: // O型
+		                this.blocks = [new Block(1,1,t),new Block(2,1,t),new Block(1,2,t),new Block(2,2,t)]
+		                break;
+		            case 2: // T型
+		                this.blocks = [new Block(1,1,t),new Block(0,2,t),new Block(1,2,t),new Block(2,2,t)]
+		                break;
+		            case 3: // J型
+		                this.blocks = [new Block(1,1,t),new Block(0,2,t),new Block(1,2,t),new Block(2,2,t)]
+		                break;
+		            case 4: // L型
+		                this.blocks = [new Block(2,1,t),new Block(0,2,t),new Block(1,2,t),new Block(2,2,t)]
+		                break;
+		            case 5: // S型
+		                this.blocks = [new Block(1,1,t),new Block(2,1,t),new Block(0,2,t),new Block(1,2,t)]
+		                break;
+		            case 6: // Z型
+		                this.blocks = [new Block(0,1,t),new Block(1,1,t),new Block(1,2,t),new Block(2,2,t)]
+		                break;
+		            }
+		    }
 
-    	    // フィールドに描画する
-    	    draw(ctx){
-    	        this.blocks.forEach(block => {
-    	            block.draw(this.x, this.y, ctx)
-    	        })
-    	    }
+		    // フィールドに生成する
+		    spawn(){
+		        this.x = COLS_COUNT/2 - 2
+		        this.y = -3
+		    }
 
-    	    // 次のミノを描画する
-    	    drawNext(ctx){
-    	        this.blocks.forEach(block => {
-    	            block.drawNext(ctx)
-    	        })
-    	    }
-    	    
-    	    // 回転させる
-    	    rotate(){
-    	        this.blocks.forEach(block=>{
-    	            let oldX = block.x
-    	            block.x = block.y
-    	            block.y = 3-oldX
-    	        })
-    	    }
+		    // フィールドに描画する
+		    draw(ctx){
+		        this.blocks.forEach(block => {
+		            block.draw(this.x, this.y, ctx)
+		        })
+		    }
 
-    	    // 次に移動しようとしている位置の情報を持ったミノを生成
-    	    // 描画はせず、移動が可能かどうかの判定に使用する
-    	    getNewBlocks(moveX, moveY, rot){
-    	        let newBlocks = this.blocks.map(block=>{
-    	            return new Block(block.x, block.y)
-    	        })
-    	        newBlocks.forEach(block => {
-    	            // 移動させる場合
-    	            if(moveX || moveY){
-    	                block.x += moveX
-    	                block.y += moveY
-    	            }
+		    // 次のミノを描画する
+		    drawNext(ctx){
+		        this.blocks.forEach(block => {
+		            block.drawNext(ctx)
+		        })
+		    }
+		    
+		    // 回転させる
+		    rotate(){
+		        this.blocks.forEach(block=>{
+		            let oldX = block.x
+		            block.x = block.y
+		            block.y = 3-oldX
+		        })
+		    }
 
-    	            // 回転させる場合
-    	            if(rot){
-    	                let oldX = block.x
-    	                block.x = block.y
-    	                block.y = 3-oldX
-    	            }
+		    // 次に移動しようとしている位置の情報を持ったミノを生成
+		    // 描画はせず、移動が可能かどうかの判定に使用する
+		    getNewBlocks(moveX, moveY, rot){
+		        let newBlocks = this.blocks.map(block=>{
+		            return new Block(block.x, block.y)
+		        })
+		        newBlocks.forEach(block => {
+		            // 移動させる場合
+		            if(moveX || moveY){
+		                block.x += moveX
+		                block.y += moveY
+		            }
 
-    	            // グローバル座標に変換
-    	            block.x += this.x
-    	            block.y += this.y
-    	        })
-    	        
-    	        return newBlocks
-    	    }
-    	}
+		            // 回転させる場合
+		            if(rot){
+		                let oldX = block.x
+		                block.x = block.y
+		                block.y = 3-oldX
+		            }
 
-    	class Field{
-    	    constructor(){
-    	        this.blocks = []
-    	    }
+		            // グローバル座標に変換
+		            block.x += this.x
+		            block.y += this.y
+		        })
+		        
+		        return newBlocks
+		    }
+		}
 
-    	    drawFixedBlocks(ctx){
-    	        this.blocks.forEach(block => block.draw(0, 0, ctx))
-    	    }
+		class Field{
+		    constructor(){
+		        this.blocks = []
+		    }
 
-    	    checkLine(){
-    	      for(var r = 0; r < ROWS_COUNT; r++){
-    	        var c = this.blocks.filter(block => block.y === r).length
-    	        if(c === COLS_COUNT){
-    	          this.blocks = this.blocks.filter(block => block.y !== r)
-    	          this.blocks.filter(block => block.y < r).forEach(upper => upper.y++)
-    	        }
-    	      }
-    	    }
+		    drawFixedBlocks(ctx){
+		        this.blocks.forEach(block => block.draw(0, 0, ctx))
+		    }
 
-    	    has(x, y){
-    	        return this.blocks.some(block => block.x == x && block.y == y)
-    	    }
-    	}
-    
-    
+		    checkLine(){
+		      for(var r = 0; r < ROWS_COUNT; r++){
+		        var c = this.blocks.filter(block => block.y === r).length
+		        if(c === COLS_COUNT){
+		          this.blocks = this.blocks.filter(block => block.y !== r)
+		          this.blocks.filter(block => block.y < r).forEach(upper => upper.y++)
+		        }
+		      }
+		    }
+
+		    has(x, y){
+		        return this.blocks.some(block => block.x == x && block.y == y)
+		    }
+		}
     </script>
-  </body>
+
+</body>
 </html>
