@@ -1,16 +1,216 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>404 on CodePen</title>
+<!-- saved from url=(0064)https://cdpn.io/kaypooma/fullpage/OJJBGy?anon=true&view=fullpage -->
+<html lang="en" data-minimalscrollbar="yes" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+  
+
+  <title>CodePen - Glitchy 404 Page</title>
+
+    <link rel="canonical" href="https://codepen.io/kaypooma/pen/OJJBGy">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  
+  
+<style>
+@import url(https://fonts.googleapis.com/css?family=Gilda+Display);
+
+html {
+  background: radial-gradient(#000, #111);
+  color: white;
+  overflow: hidden;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.static {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: -100px;
+  opacity: 0.05;
+  z-index: 230;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  user-drag: none;
+}
+
+.error {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  font-size: 95px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60px;
+  right: 0;
+  -webkit-animation: noise 2s linear infinite;
+          animation: noise 2s linear infinite;
+  overflow: default;
+}
+
+.error:after {
+  content: '404';
+  font-family: 'Gilda Display', serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: blue;
+  -webkit-animation: noise-1 .2s linear infinite;
+          animation: noise-1 .2s linear infinite;
+}
+
+.info {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 140px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: noise-3 1s linear infinite;
+          animation: noise-3 1s linear infinite;
+}
+
+.error:before {
+  content: '404';
+  font-family: 'Gilda Display', serif;
+  font-size: 100px;
+  font-style: italic;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  line-height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  color: red;
+  -webkit-animation: noise-2 .2s linear infinite;
+          animation: noise-2 .2s linear infinite;
+}
+
+@-webkit-keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@-webkit-keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@-webkit-keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
+  4.3% {opacity: 1; transform: scaleY(1.7);}
+  43% {opacity: 1; transform: scaleX(1.5);}
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; transform: scaleY(1);}  
+  4.3% {opacity: 1; transform: scaleY(1.7);}
+  43% {opacity: 1; transform: scaleX(1.5);}
+}
+
+@-webkit-keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(4);}
+  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
+}
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
+  4.3% {opacity: 1; transform: scaleY(4);}
+  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
 </head>
-<body>
-<div class="error">404</div>
-<br /><br />
+
+<body translate="no" style="">
+  <div class="error">404</div>
+<br><br>
 <span class="info">File not found</span>
-<img src="http://images2.layoutsparks.com/1/160030/too-much-tv-static.gif" class="static" />
-</body>
-</html>
+<img src="http://images2.layoutsparks.com/1/160030/too-much-tv-static.gif" class="static">
+  <script src="./jquery.min.js.ダウンロード"></script>
+  
+  
+
+
+
+</body></html>
