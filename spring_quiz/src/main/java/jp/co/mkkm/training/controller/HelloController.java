@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HelloController {
-	
+
 // ------------------------------------------------
-	
+
 	@RequestMapping(path = "/hello")
 	public String hello() {
 		return "tetoris/index";
 	}
-	
+
 	@RequestMapping(path = "/omikuji")
 	public String omikuji() {
 		return "omikuji/index";
@@ -22,6 +22,10 @@ public class HelloController {
 	public String slot() {
 		return "slot/index";
 	}
-	
-	
+
+	@RequestMapping(path = "/opening")
+	public String opening() {
+		return "opening";
+	}
+
 }
